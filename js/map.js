@@ -1,6 +1,4 @@
-﻿var mapDiv = document.getElementById('map');
-var catalunya = new google.maps.LatLng(41.652393,1.691895);
-window.onload = function() {
+﻿window.onload = function() {
 var mapDiv = document.getElementById('map');
 var catalunya = new google.maps.LatLng(41.652393,1.691895);
 var options = {

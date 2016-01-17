@@ -6,7 +6,9 @@ center: catalunya,
 zoom: 8,
 mapTypeId: google.maps.MapTypeId.ROADMAP,
 //el valor true desactiva la interfaz, el valor false (por defecto) la activa
-disableDefaultUI: true
+disableDefaultUI: false,
+//el valor false desactiva el mapTypeControl. Para mostrarlo debemos utilizar el valor true o no utilizar este atributo (por defecto el valor es true)
+mapTypeControl: true
 };
 var mapa = new google.maps.Map(mapDiv, options);
 }

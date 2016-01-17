@@ -10,9 +10,16 @@ disableDefaultUI: false,
 //el valor false desactiva el mapTypeControl. Para mostrarlo debemos utilizar el valor true o no utilizar este atributo (por defecto el valor es true)
 mapTypeControl: true,
 //Definido el mapTypeControl como true, podemos establecer los valores para la propiedad mapTypeControlOptions
-// DEFAULT, HORIZONTAL_BAR, DROPDOWN_MENU
 mapTypeControlOptions: {
-    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+    // DEFAULT, HORIZONTAL_BAR, DROPDOWN_MENU
+    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+    //Definimos la posición del control en la parte inferior central del mapa
+    position: google.maps.ControlPosition.BOTTOM_CENTER,
+    // Permitiremos al usuario escoger entre los siguientes dos tipos de mapa
+    mapTypeIds: [
+        google.maps.MapTypeId.ROADMAP,
+        google.maps.MapTypeId.HYBRID
+    ]
 }
 };
 var mapa = new google.maps.Map(mapDiv, options);

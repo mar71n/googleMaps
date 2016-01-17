@@ -12,7 +12,7 @@ var options = {
     },
     keyboardShortcuts: false,
     disableDoubleClickZoom: true,
-    draggable: false,
+    draggable: true,
     scrollwheel: false,
     streetViewControl: true,
     streetViewControlOptions: {
@@ -43,7 +43,11 @@ var options = {
             google.maps.MapTypeId.ROADMAP,
             google.maps.MapTypeId.HYBRID
         ]
-    }
+    },
+    noClear: true,
+    backgroundColor: '#ff0000',
+    draggableCursor: 'crosshair',
+    draggingCursor: 'move'
 };
 var mapa = new google.maps.Map(mapDiv, options);
 }

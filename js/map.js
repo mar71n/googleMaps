@@ -8,7 +8,12 @@ mapTypeId: google.maps.MapTypeId.ROADMAP,
 //el valor true desactiva la interfaz, el valor false (por defecto) la activa
 disableDefaultUI: false,
 //el valor false desactiva el mapTypeControl. Para mostrarlo debemos utilizar el valor true o no utilizar este atributo (por defecto el valor es true)
-mapTypeControl: true
+mapTypeControl: true,
+//Definido el mapTypeControl como true, podemos establecer los valores para la propiedad mapTypeControlOptions
+// DEFAULT, HORIZONTAL_BAR, DROPDOWN_MENU
+mapTypeControlOptions: {
+    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+}
 };
 var mapa = new google.maps.Map(mapDiv, options);
 }

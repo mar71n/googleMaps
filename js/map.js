@@ -50,11 +50,15 @@ var options = {
     draggingCursor: 'move'
 };
 var mapa = new google.maps.Map(mapDiv, options);
+var icon = {
+            url:"iconos/1453096694_green-pin.png", //url
+            scaledSize: new google.maps.Size(30, 30) //size
+        };
 var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(41.381269, 2.138956),
 			map: mapa,
 			title: 'Facultad de Biblioteconomía de la UB',
-			icon: 'iconos/1453096694_green-pin.png'
+			icon: icon
 		});
 var infowindow = new google.maps.InfoWindow({
                     content:'<h1>Facultad de Biblioteconomia i Documentación</h1> \

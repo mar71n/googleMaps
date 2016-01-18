@@ -50,4 +50,19 @@ var options = {
     draggingCursor: 'move'
 };
 var mapa = new google.maps.Map(mapDiv, options);
+var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(41.381269, 2.138956),
+			map: mapa,
+			title: 'Facultad de Biblioteconomía de la UB',
+			icon: 'iconos/1453096694_green-pin.png'
+		});
+var infowindow = new google.maps.InfoWindow({
+                    content:'<h1>Facultad de Biblioteconomia i Documentación</h1> \
+                            <p>Adreça: Carrer de Melcior de Palau, 140, 08014 Barcelona.</p> \
+                            <p>Telèfon: 934 03 57 70.</p> \
+                            <img src="imagenes/books-1082949_640.jpg" alt="Facultad de Biblioteconomía i Documentación" />' 
+                 });
+google.maps.event.addListener(marker, 'click', function() { 
+    infowindow.open(mapa,marker); 
+}); 
 }

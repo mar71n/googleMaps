@@ -69,4 +69,5 @@ var infowindow = new google.maps.InfoWindow({
 google.maps.event.addListener(marker, 'click', function() { 
     infowindow.open(mapa,marker); 
 }); 
+initialize5()
 }

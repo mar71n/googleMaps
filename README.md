@@ -9,3 +9,5 @@ Introducción a Google Maps API v3 desde
 
 4 http://www.rubenalcaraz.es/pinakes/informatica/introduccion-google-maps-apiv3-parte-4-los-marcadores/
                  - https://developers.google.com/maps/documentation/javascript/markers
+                 
+5 http://www.rubenalcaraz.es/pinakes/informatica/introduccion-a-google-maps-apiv3-parte-5-multiples-marcadores-con-infowindow/

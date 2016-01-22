@@ -14,13 +14,13 @@ function setMarkers(map, marcadores) {
             map: map,
             title: marcadores[i][0],
         });
-        (function(i, marker) {
-            google.maps.event.addListener(marker,'click',function() {
+        (function(j, marcador) { //  aislamos j y marcador de esta función, de la i y marker del bucle, usando un closure
+            google.maps.event.addListener(marcador,'click',function() {
                 if (!infowindow) {
                     infowindow = new google.maps.InfoWindow();
                 }
-                infowindow.setContent(marcadores[i][3]);
-                infowindow.open(map, marker);
+                infowindow.setContent(marcadores[j][3]);
+                infowindow.open(map, marcador);
                 });
         })(i, marker);
     }

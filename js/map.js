@@ -70,4 +70,5 @@ google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(mapa,marker); 
 }); 
 initialize5()
+initialize6()
 }

@@ -3,7 +3,6 @@
 	new google.maps.LatLng(41.14763810202612, 1.1041264453124313),
 	new google.maps.LatLng(41.72828039782993, 1.8237309374999313)
 ];
-var mapDiv = document.getElementById('map');
 var catalunya = new google.maps.LatLng(41.652393,1.691895);
 var options = {
 	center: catalunya,
@@ -19,8 +18,18 @@ miPoligono = new google.maps.Polygon({
   fillColor: "#FF0000",
   fillOpacity: 0.4
 });
- 
+
+var infowindow_poligono = new google.maps.InfoWindow({
+                position: poligono[0],
+                content:'<h3>Polígono</h3> \
+                        <p>Entre tres ciudades</p> \
+                        <p>Resultado.</p> '
+             });
+
 function initialize6(){
     var map6 = new google.maps.Map(document.getElementById('map6'), options);
     miPoligono.setMap(map6);
+    google.maps.event.addListener(miPoligono, 'click', function() {
+        infowindow_poligono.open(map6,miPoligono);
+    });
 }
